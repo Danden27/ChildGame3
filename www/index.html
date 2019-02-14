@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+  <html lang="en">
+    <head>
+        
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta charset ="utf-8">
+        
+        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="jquery/jquery-1.8.0.min.js"></script>
+        <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+ 
+
+                <title>Memory Spiel</title>
+    </head>
+    <body>
+        <div data-role="page" id="p0"> 
+            <div data-role="header"> 
+                <h1 id="title1">Memory Spiel</h1> 
+                
+            </div><!-- /header --> 
+            <div data-role="content"> 
+                <h1 id="title1">Hauptmenü</h1>
+                
+                <a href="#p1" class="ui-btn" data-transition="flip" >Spiel starten</a>
+               <a href="#p1" class="ui-btn" data-transition="flip" >Level 1</a>
+                <a href="#p2" class="ui-btn" data-transition="flip" >Level 2</a>
+            </div><!-- /content --> 
+            <div data-role="footer"> 
+                
+                
+            </div><!-- /footer --> 
+        </div>
+        
+        <div data-role="page" id="p1"> 
+            <div data-role="header"> 
+                <h1 id="title1">Memory Spiel</h1> 
+                
+            </div><!-- /header --> 
+            <div data-role="content"> 
+                <!-- Level 1 Menü --> 
+
+                <h1 id="title1">Level 1</h1>
+                <a href="#p0" class="ui-btn" data-transition="flip" >Hauptmenü</a> 
+                <a href="#p2" class="ui-btn" data-transition="flip" >Nächstes Level</a> 
+
+                <button class="resetGame">Neu starten</button>  
+                <!-- in Result werden die Fehlversuche eingefügt --> 
+
+                <p class="result"></p>
+                
+                <!-- Memory Game Bereich mit 2x4 Karten --> 
+
+                <section class="memoryGame">
+                    <div class="memoryCard eins" id="1" data-framework="apfel">
+                <img class="front" src="img/apfel.png" alt="apfel"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard eins" id="2" data-framework="apfel">
+                <img class="front" src="img/apfel.png" alt="apfel"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard zwei" id="4" data-framework="zahn">
+                <img class="front" src="img/zahn.png" alt="zahn"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard zwei" id="5" data-framework="zahn">
+                <img class="front" src="img/zahn.png" alt="zahn"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard drei" id="7" data-framework="zahnbuerste">
+                <img class="front" src="img/zahnbuerste.png" alt="zahnbuerste"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard drei" id="8" data-framework="zahnbuerste">
+                <img class="front" src="img/zahnbuerste.png" alt="zahnbuerste"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                 <div class="memoryCard fünf" id="13" data-framework="zahnseide">
+                <img class="front" src="img/zahnseide.png" alt="zahnseide"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard fünf" id="14" data-framework="zahnseide">
+                <img class="front" src="img/zahnseide.png" alt="zahnseide"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+
+                        </section>
+            </div>
+                
+                <!-- /content --> 
+            <div data-role="footer"> 
+                
+                
+            </div><!-- /footer --> 
+        </div>
+        
+                <div data-role="page" id="p2"> 
+            <div data-role="header"> 
+                <h1 id="title1">Memory Spiel</h1> 
+                
+            </div><!-- /header --> 
+            <div data-role="content"> 
+                <!-- Level 2 Menü --> 
+
+                <h1>Level 2</h1>
+                <div><a href="#p0" class="ui-btn" data-transition="flip" >Hauptmenü</a> 
+                     
+                    </div>
+                <button class="resetGame">Neu Starten</button> 
+                <!-- in Result werden die Fehlversuche eingefügt --> 
+                
+                <p class="result"></p>
+                 
+                <!-- Memory Game Bereich mit 2x4 Karten --> 
+
+                <section class="memoryGame">
+                    <div class="memoryCard eins" id="1" data-framework="apfel">
+                <img class="front" src="img/apfel.png" alt="apfel"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard eins" id="2" data-framework="apfel">
+                <img class="front" src="img/apfel.png" alt="apfel"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard zwei" id="4" data-framework="zahn">
+                <img class="front" src="img/zahn.png" alt="zahn"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard zwei" id="5" data-framework="zahn">
+                <img class="front" src="img/zahn.png" alt="zahn"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard drei" id="7" data-framework="zahnbuerste">
+                <img class="front" src="img/zahnbuerste.png" alt="zahnbuerste"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard drei" id="8" data-framework="zahnbuerste">
+                <img class="front" src="img/zahnbuerste.png" alt="zahnbuerste"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard vier" id="10" data-framework="zahnpasta">
+                <img class="front" src="img/zahnpasta.png" alt="zahnpasta"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard vier" id="11" data-framework="zahnpasta">
+                <img class="front" src="img/zahnpasta.png" alt="zahnpasta"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard fünf" id="13" data-framework="zahnseide">
+                <img class="front" src="img/zahnseide.png" alt="zahnseide"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard fünf" id="14" data-framework="zahnseide">
+                <img class="front" src="img/zahnseide.png" alt="zahnseide"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard sechs" id="16"  data-framework="mund">
+                <img class="front" src="img/mund.png" alt="mund"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                    <div class="memoryCard sechs" id="17"  data-framework="mund">
+                <img class="front" src="img/mund.png" alt="mund"/>
+                        <img class="back" src="img/zahn2.png" alt="zahn2"/>
+                        </div>
+                        </section>
+            </div>
+                
+                <!-- /content --> 
+            <div data-role="footer"> 
+                
+                
+            </div><!-- /footer --> 
+        </div>
+
+
+                <script src="js/my.js"></script>
+    </body>
+</html>
